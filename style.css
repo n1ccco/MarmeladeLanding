@@ -1,0 +1,274 @@
+@font-face {
+  font-family: Changa;
+  src: url(fonts/Changa-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Megrim;
+  src: url(fonts/Megrim-Regular.ttf);
+}
+
+@font-face {
+  font-family: Cherry Bomb;
+  src: url(fonts/CherryBombOne-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Changa, sans-serif;
+  font-size: 35px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container-center {
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+  max-height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  padding-left: 24px;
+  background-color: #c1dab2;
+}
+
+header a {
+  color: #000;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 200;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.logo {
+  color: #000;
+  font-family: Megrim, sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cart-icon {
+  align-items: center;
+  display: flex;
+}
+
+/* HEADER END */
+
+.container-order {
+  max-height: 835px;
+  background-color: #acc96f;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.container-center {
+  width: 1265px;
+}
+
+.promo h1 {
+  color: #000;
+  font-family: "Cherry Bomb";
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.promo p {
+  color: #000;
+  font-family: Changa;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+.promo-image {
+  width: 635px;
+  height: 635px;
+  background-color: #f4aeaeab;
+  border-radius: 30px;
+}
+
+.order-btn {
+  display: inline-block;
+  background-color: #8a9932;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-radius: 20px;
+  width: 380px;
+  height: 85px;
+}
+
+.order-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* MARQUEE */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding: 10px 0;
+  animation: marquee 20s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-content span {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  color: #000;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* MARQUEE END */
+
+.container-products {
+  background-color: #ecf0ba;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+}
+.product {
+  width: 400px;
+  height: 750px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product img {
+  width: 225px;
+  height: 275px;
+}
+
+.product h2 {
+  color: #e98b8b;
+  -webkit-text-stroke: 3px black;
+  font-family: "Cherry Bomb";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.product .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+  position: relative;
+}
+
+.product .spices {
+  position: absolute;
+  color: #000;
+  font-family: Changa;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  text-align: center;
+  -webkit-text-stroke: 0px #000;
+  top: 80px;
+}
+
+.product .spices img {
+  position: absolute;
+  width: 91px;
+  height: 93px;
+  left: -90px;
+  top: -20px;
+}
+
+.quantity {
+  width: 360px;
+  height: 72px;
+  border-radius: 30px;
+  border-color: #000;
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity img {
+  width: 30px;
+  height: 30px;
+}
+
+.quantity .decrease {
+  margin-left: 30px;
+}
+
+.quantity .increase {
+  margin-right: 30px;
+}
+
+.price {
+  width: 360px;
+  height: 72px;
+  background-color: #93a542;
+  border-radius: 30px;
+  border-color: #000;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
