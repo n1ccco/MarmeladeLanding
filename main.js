@@ -3,6 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartQuantitySpan = document.querySelector(".cart-quantity");
   let totalCartQuantity = 0;
 
+  function showPopup(message) {
+    let popup = document.querySelector(".popup");
+    if (!popup) {
+      popup = document.createElement("div");
+      popup.className = "popup";
+      document.body.appendChild(popup);
+    }
+    popup.textContent = message;
+    popup.style.display = "block";
+    popup.style.opacity = 0; // Set opacity to 0 and make it visible to start the transition
+
+    setTimeout(() => {
+      popup.style.opacity = 0.6; // Fade in
+    }, 10); // Delay just enough to ensure the style changes are applied
+
+    setTimeout(() => {
+      popup.style.opacity = 0; // Start fading out after 2000 milliseconds (2 seconds)
+      setTimeout(() => {
+        popup.style.display = "none"; // Fully hide after the fade-out transition
+      }, 500); // Delay to allow the fade-out transition to complete
+    }, 2000);
+  }
+
   products.forEach((product) => {
     const decreaseButton = product.querySelector(".decrease");
     const increaseButton = product.querySelector(".increase");
@@ -33,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
       cartQuantitySpan.style.display = "flex";
       totalCartQuantity += currentQuantity;
       cartQuantitySpan.textContent = totalCartQuantity;
+      if (totalCartQuantity > 0) {
+        showPopup("zum Warenkorb hinzugefügt");
+      }
     });
   });
 });
